@@ -1,7 +1,6 @@
 import os
 from flask import Flask, render_template
 
-
 app = Flask(__name__)
 
 
@@ -20,7 +19,12 @@ def contact():
     return render_template("contact.html")
 
 
-if __name__ == "__main__":
+@app.route('/careers')
+def careers():
+    return render_template("careers.html")
+
+
+if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
-            port=int(os.environ.get("PORT")),
+            port=int(os.environ.get('PORT')),
             debug=True)
