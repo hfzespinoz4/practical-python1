@@ -1,16 +1,19 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Adding boostrap to the project using Flask -->
+    <link rel="stylesheet" href="{{url_for('static', filename='clean-blog.min.css')}}">
     <title>Hello Flask</title>
 </head>
-
 <body>
-    <nav>
-        <ul>
-            <li><a href="{{ url_for('index') }}">Home</a></li>
-            <li><a href="{{ url_for('about') }}">About</a></li>
-            <li><a href="{{ url_for('contact') }}">Contact</a></li>
-            <li><a href="{{ url_for('careers') }}">Careers</a></li>
+    <nav class="navbar nav bg-light">
+        <ul class="nav-list">
+            <li><a class="nav-item" href="{{ url_for('index') }}">Home</a></li>
+            <li><a class="nav-item" href="{{ url_for('about') }}">About</a></li>
+            <li><a class="nav-item" href="{{ url_for('contact') }}">Contact</a></li>
+            <li><a class="nav-item" href="{{ url_for('careers') }}">Careers</a></li>
         </ul>
     </nav>
 
