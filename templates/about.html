@@ -3,10 +3,20 @@
 
    <h4>  {{ company_data[1]["name"] }} </h4>
    <p> {{ company_data[1]["description"]}} </p>
-
-    <br>
-
-    <h4>  {{ company_data[0]["name"] }} </h4>
+   <br>
+   <h4>  {{ company_data[0]["name"] }} </h4>
    <p> {{ company_data[0]["description"]}} </p>
 
+   {% for member in company_data %}
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h3>{{ member.name }}</h3>
+                <p>{{ member.description }}</p>
+            </div>
+            <div class="col-md-5">
+                <img class="featurette-image img-responsive" src="{{ member.image_source }}" alt="Picture of {{ member.name }}">
+            </div>
+        </div>
+        <hr class="featurette-divider"> 
+    {% endfor %}
 {% endblock %}
