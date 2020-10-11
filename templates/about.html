@@ -1,7 +1,12 @@
 {% extends 'base.html' %} {% block content %}
     <h1>{{page_title}}</h1>
 
-    {% for number in list %}
-        <p>{{number}}</p>
-    {% endfor %}
+   <h4>  {{ company_data[1]["name"] }} </h4>
+   <p> {{ company_data[1]["description"]}} </p>
+
+    <br>
+
+    <h4>  {{ company_data[0]["name"] }} </h4>
+   <p> {{ company_data[0]["description"]}} </p>
+
 {% endblock %}
